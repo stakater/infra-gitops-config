@@ -9,4 +9,4 @@ We have 2 clusters:
 
 ## Application workloads
 
-The environment scoped application resources are deployed through [nordmart-apps-gitops-config](https://github.com/stakater/nordmart-apps-gitops-config) repository. 
+The environment scoped application resources are deployed through [apps-gitops-config](https://github.com/stakater/nordmart-apps-gitops-config) repository. 
