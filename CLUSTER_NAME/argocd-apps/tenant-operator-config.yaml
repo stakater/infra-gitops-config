@@ -8,8 +8,8 @@ spec:
     namespace: openshift-gitops
     server: 'https://kubernetes.default.svc'
   source:
-    path: su-instance-1/tenant-operator-config
-    repoURL: 'https://github.com/stockholmuniversity/infra-gitops-config'
+    path: CLUSTER_NAME/tenant-operator-config
+    repoURL: 'https://github.com/your-organization/infra-gitops-config'
     targetRevision: HEAD
     directory:
       recurse: true
