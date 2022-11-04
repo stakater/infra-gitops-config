@@ -1,0 +1,17 @@
+apiVersion: tenantoperator.stakater.com/v1beta1
+kind: Quota
+metadata:
+  name: TENANT_NAME-large
+  annotations:
+    quota.tenantoperator.stakater.com/is-default: "false"
+spec:
+  resourcequota:
+    hard:
+      requests.cpu: "16"
+      requests.memory: 32Gi
+  limitrange:
+    limits:
+      - defaultRequest:
+          cpu: 10m
+          memory: 50Mi
+        type: Container

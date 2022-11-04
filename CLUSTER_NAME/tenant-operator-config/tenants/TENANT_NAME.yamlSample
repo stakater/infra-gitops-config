@@ -1,0 +1,29 @@
+apiVersion: tenantoperator.stakater.com/v1beta1
+kind: Tenant
+metadata:
+  name: TENANT_NAME
+spec:
+  quota: TENANT_NAME-large
+  owners:
+    users:
+     - abc@gmail.com
+  argocd:
+      sourceRepos:
+      - 'https://github.com/org/infra-gitops-config'
+      - 'https://github.com/org/apps-gitops-config'
+  templateInstances:
+  - spec:
+      template: tenant-vault-access
+      sync: true
+  namespaces:
+  - build
+  - dev
+  - prod
+  sandboxConfig:
+    enabled: true
+    private: true
+  specificMetadata:
+  - namespaces:
+      - TENANT_NAME-build
+    annotations:
+      openshift.io/node-selector: node-role.kubernetes.io/pipeline=
