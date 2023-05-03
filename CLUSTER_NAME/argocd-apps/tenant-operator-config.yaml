@@ -13,7 +13,7 @@ spec:
     targetRevision: HEAD
     directory:
       recurse: true
-  project: default
+  project: root-tenant
   syncPolicy:
     automated:
       prune: true
